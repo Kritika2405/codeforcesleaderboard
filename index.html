@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LeaderBoard</title>
+    
+  </head>
+  <body>
+    
+    <img src="logo.png" alt="LOGO">
+    <header><br><br><pr></pr><h1 style="display:inline">L</h1><h3 style="display:inline">EADERBOARD</h3></pr></header>
+    <div class="body">
+        <br><br>
+    <div class="wrap">
+        
+        
+        <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for Countries.." title="Type in a name">
+        <input type="text" id="searchname" onkeyup="myFunction2()" placeholder="Search for Handles.." title="Type in a name">
+    </div>
+    <br><br><br>
+    <table id="table">
+        <tr>
+          <th>RANK</th>
+          <th>HANDLE</th>
+          <th>COUNTRY</th>
+        </tr>
+        <tr >
+          <td>1</td>
+          <td>Benq</td>
+          <td>India</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>tourist</td>
+            <td>Japan</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>jiyangly</td>
+            <td>China</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Rebelz</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Noimi</td>
+            <td>India</td>
+          </tr>
+          <tr>
+              <td>6</td>
+              <td>Duality</td>
+              <td>Bangladesh</td>
+          </tr>
+          <tr>
+              <td>7</td>
+              <td>Laurie</td>
+              <td>Afghanistan</td>
+          </tr>
+          <tr>
+              <td>8</td>
+              <td>Petr</td>
+              <td>India</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>heno239</td>
+                <td>Japan</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>uglu2333</td>
+                <td>China</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Egor</td>
+                <td>Thailand</td>
+              </tr>
+              <tr>
+                  <td>12</td>
+                  <td>Cyanic</td>
+                  <td>United States</td>
+              </tr>
+              <tr>
+                  <td>13</td>
+                  <td>dottle</td>
+                  <td>Bangladesh</td>
+              </tr>
+              <tr>
+                  <td>14</td>
+                  <td>Kostroma</td>
+                  <td>China</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>Toxel</td>
+                  <td>Thailand</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>icecuber</td>
+                    <td>Afghanistan</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>pointy</td>
+                    <td>India</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Melania</td>
+                    <td>France</td>
+                  </tr>
+                  <tr>
+                      <td>19</td>
+                      <td>atodo</td>
+                      <td>Japan</td>
+                  </tr>
+                  <tr>
+                      <td>20</td>
+                      <td>wiki</td>
+                      <td>China</td>
+                    </tr>
+        
+      </table>
+      </div>
+</body>
+<script>
+    function myFunction() {
+
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+
+
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display ="none";
+      }
+    }
+  }
+}
+
+function myFunction2() {
+
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("searchname");
+filter = input.value.toUpperCase();
+table = document.getElementById("table");
+tr = table.getElementsByTagName("tr");
+
+
+for (i = 0; i < tr.length; i++) {
+  td = tr[i].getElementsByTagName("td")[1];
+  if (td) {
+    txtValue = td.textContent || td.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      tr[i].style.display = "";
+    } else {
+      tr[i].style.display ="none";
+    }
+  }
+}
+}
+</script>
+</html>
